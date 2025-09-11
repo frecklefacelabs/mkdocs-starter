@@ -14,6 +14,7 @@
           mkdocs-material
           pkgs.python311Packages.mkdocs-macros
           pymdown-extensions
+          mkdocs-git-revision-date-localized-plugin
         ]);
       in {
         devShells.default = pkgs.mkShell {
