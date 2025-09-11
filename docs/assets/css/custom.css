@@ -1,0 +1,104 @@
+/* Custom styles for MkDocs starter project */
+
+:root {
+  --primary-color: #2196f3;
+  --accent-color: #ff9800;
+  --text-color: #333;
+  --bg-color: #fff;
+  --code-bg: #f5f5f5;
+}
+
+/* Custom header styling */
+.md-header {
+  background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+}
+
+/* Custom code block styling */
+.codehilite,
+pre {
+  background-color: var(--code-bg) !important;
+  border-radius: 4px;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+/* Inline code styling */
+code {
+  background-color: var(--code-bg);
+  padding: 0.2rem 0.4rem;
+  border-radius: 3px;
+  font-size: 0.9em;
+}
+
+/* Custom button styling */
+.md-button {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+  display: inline-block;
+  margin: 0.25rem;
+  transition: background-color 0.3s ease;
+}
+
+.md-button:hover {
+  background-color: var(--accent-color);
+}
+
+/* Custom admonition styles */
+.admonition {
+  border-radius: 4px;
+  margin: 1rem 0;
+  padding: 1rem;
+}
+
+.admonition.note {
+  border-left: 4px solid var(--primary-color);
+  background-color: rgba(33, 150, 243, 0.1);
+}
+
+.admonition.warning {
+  border-left: 4px solid var(--accent-color);
+  background-color: rgba(255, 152, 0, 0.1);
+}
+
+/* Table styling */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1rem 0;
+}
+
+table th,
+table td {
+  border: 1px solid #ddd;
+  padding: 0.75rem;
+  text-align: left;
+}
+
+table th {
+  background-color: var(--code-bg);
+  font-weight: bold;
+}
+
+/* Responsive design improvements */
+@media (max-width: 768px) {
+  .md-content {
+    padding: 1rem;
+  }
+  
+  table {
+    font-size: 0.9em;
+  }
+}
+
+/* Custom navigation styling */
+.md-nav__link--active {
+  color: var(--primary-color) !important;
+}
+
+/* Footer customization */
+.md-footer {
+  background-color: #263238;
+}
