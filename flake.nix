@@ -1,37 +1,28 @@
 {
-  description = "MkDocs development environment";
+  description = "Dev shell with MkDocs and MkDocs Material";
 
-  inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    flake-utils.url = "github:numtide/flake-utils";
-  };
+  inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.05";
+  inputs.flake-utils.url = "github:numtide/flake-utils";
 
   outputs = { self, nixpkgs, flake-utils }:
     flake-utils.lib.eachDefaultSystem (system:
       let
-        pkgs = nixpkgs.legacyPackages.${system};
-        pythonEnv = pkgs.python3.withPackages (ps: with ps; [
+        pkgs = import nixpkgs { inherit system; };
+        pythonEnv = pkgs.python311.withPackages (ps: with ps; [
+          pip
           mkdocs
           mkdocs-material
-          mkdocs-material-extensions
+          pkgs.python311Packages.mkdocs-macros
+          pymdown-extensions
         ]);
-      in
-      {
+      in {
         devShells.default = pkgs.mkShell {
-          buildInputs = with pkgs; [
+          buildInputs = [
             pythonEnv
-            nodejs
           ];
-
           shellHook = ''
-            echo "MkDocs development environment activated!"
-            echo "Available commands:"
-            echo "  mkdocs serve    - Start development server"
-            echo "  mkdocs build    - Build static site"
-            echo "  mkdocs new      - Create new project"
-            echo ""
-            python --version
-            mkdocs --version
+            echo "🚀 Welcome to your MkDocs dev shell!"
+            echo "Run: mkdocs serve"
           '';
         };
       });
