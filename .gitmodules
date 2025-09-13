@@ -1,3 +1,6 @@
 [submodule "remote/typescript"]
 	path = remote/typescript
 	url = https://github.com/frecklefacelabs/typescript_doc_test.git
+[submodule "remote/python"]
+	path = remote/python
+	url = https://github.com/frecklefacelabs/python_doc_test.git
