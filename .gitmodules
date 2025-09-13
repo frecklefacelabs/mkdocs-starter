@@ -1,0 +1,3 @@
+[submodule "remote/typescript"]
+	path = remote/typescript
+	url = https://github.com/frecklefacelabs/typescript_doc_test.git
