@@ -47,6 +47,11 @@ plugins:
   - search
   - git-revision-date-localized:
       enable_creation_date: true
+  - mkdocstrings:
+      default_handler: python
+      handlers:
+        python:
+          paths: [remote/python]
 
 # Markdown extensions
 markdown_extensions:
@@ -74,12 +79,13 @@ extra_css:
 # Navigation
 nav:
   - Home: index.md
+  - My page: my_page.md
   - Getting Started:
-    - Installation: getting-started/installation.md
-    - Quick Start: getting-started/quickstart.md
+      - Installation: getting-started/installation.md
+      - Quick Start: getting-started/quickstart.md
   - API Documentation:
-    - Overview: api/overview.md
-    - Reference: api/reference.md
+      - Overview: api/overview.md
+      - Reference: api/reference.md
 
 # Extra
 extra:
