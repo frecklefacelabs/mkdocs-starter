@@ -51,7 +51,7 @@ plugins:
       default_handler: python
       handlers:
         python:
-          paths: [remote/python]
+          paths: [remote/python, remote/golemdb_python_sdk]
 
 # Markdown extensions
 markdown_extensions:

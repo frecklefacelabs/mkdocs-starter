@@ -4,3 +4,6 @@
 [submodule "remote/python"]
 	path = remote/python
 	url = https://github.com/frecklefacelabs/python_doc_test.git
+[submodule "remote/golemdb_python_sdk"]
+	path = remote/golemdb_python_sdk
+	url = https://github.com/Golem-Base/python-sdk.git
